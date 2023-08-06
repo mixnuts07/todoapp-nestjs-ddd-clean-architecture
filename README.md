@@ -54,10 +54,11 @@ config: 設定ファイルや DI コンテナの設定を含む。
 ## 機能（ユーザーストーリー）
 
 ```
-TODOを作成することができる
-TODOを取得することができる
-TODOを更新することができる
-TODOを削除することができる
+TODOを作成することができる(POST:/todo/id)
+TODOを1件取得することができる(GET:/todo/id)
+TODOを全件取得することができる(GET:/todo)
+TODOを更新することができる(UPDATE:/todo/id)
+TODOを削除することができる(DELETE:/todo/id)
 TODOの状態を見ることができる
 TODOの優先度を見ることができる
 
