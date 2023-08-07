@@ -75,7 +75,6 @@ TODOを更新することができる(UPDATE:/todo/id)
 TODOを削除することができる(DELETE:/todo/id)
 TODOの状態を見ることができる
 TODOの優先度を見ることができる
-
 ```
 
 ## Installation
