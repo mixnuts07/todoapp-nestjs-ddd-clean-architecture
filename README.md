@@ -7,10 +7,15 @@ DDD とクリーンアーキテクチャの練習で作りました。
 ## 技術スタック
 
 TypeScript
+
 Nest.js
+
 Prisma
+
 PostgreSQL
+
 docker-compose
+
 Jest
 
 ## ディレクトリ構成
