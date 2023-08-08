@@ -68,7 +68,7 @@ config: 設定ファイルや DI コンテナの設定を含む。
 ## 機能（ユーザーストーリー）
 
 ```
-TODOを作成することができる(POST:/todo/id)
+TODOを作成することができる(POST:/todo)
 TODOを1件取得することができる(GET:/todo/id)
 TODOを全件取得することができる(GET:/todo)
 TODOを更新することができる(UPDATE:/todo/id)
