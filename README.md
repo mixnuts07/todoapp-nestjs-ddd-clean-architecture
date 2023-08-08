@@ -10,7 +10,7 @@ TypeScript
 
 Nest.js
 
-Prisma
+TypeORM
 
 PostgreSQL
 
