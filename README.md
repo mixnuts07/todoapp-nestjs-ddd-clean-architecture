@@ -31,7 +31,7 @@ src/
 │ ├── modules/
 │ │ ├── todo/
 │ │ │ ├── dto/ // データ転送オブジェクト
-│ │ │ ├── usecases/ // ユースケース（アプリケーション層）
+│ │ │ ├── usecases/ // ユースケース（アプリケーション層）(deleted)
 │ │ │ └── controllers/ // API コントローラー（プレゼンテーション層）
 │ ├── infrastructure/ // インフラストラクチャ層
 │ │ ├── database/ // データベース関連
