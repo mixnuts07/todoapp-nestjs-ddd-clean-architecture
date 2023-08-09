@@ -1,5 +1,6 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
+// データベースのテーブルにマッピングされるオブジェクト
 @Entity()
 export class Todo {
   @PrimaryGeneratedColumn()
