@@ -76,7 +76,7 @@ Controller...リクエストを受け付ける層。入力バリデーション�
 
 Service...ビジネスロジックの定義をする層。
 
-Repository...DBとのやり取りを行う層。実装ではORマッパーの `prisma` を使用している。
+Repository...DBとのやり取りを行う層。実装ではORマッパーの `TypeORM` を使用している。
 
 ```
 
