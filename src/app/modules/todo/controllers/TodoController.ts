@@ -8,7 +8,7 @@ export class TodoController {
   constructor(private readonly todoService: TodoService) {}
 
   @Post()
-  async create(@Body() createTodoDto: CreateTodoDto): Promise<Todo> {
+  async create(@Body() createTodoDto: CreateTodoDto): Promise<Todo | void> {
     return this.todoService.create(createTodoDto);
   }
 }
