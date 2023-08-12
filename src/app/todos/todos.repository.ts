@@ -3,12 +3,8 @@ import { Todo } from './entities/Todo';
 import { Repository } from 'typeorm';
 import { todoDataSource } from 'src/app/todos/database.providers';
 
-export interface ITodoRepository {
-  save(todo: Todo): Promise<Todo>;
-}
-
 @Injectable()
-export class ToDoRepository implements ITodoRepository {
+export class ToDoRepository {
   private readonly repository: Repository<Todo>;
 
   constructor() {

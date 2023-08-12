@@ -9,6 +9,6 @@ export class TodoController {
 
   @Post()
   async create(@Body() createTodoDto: CreateTodoDto): Promise<Todo | void> {
-    return this.todoService.create(createTodoDto);
+    return this.todoService.save(createTodoDto);
   }
 }
