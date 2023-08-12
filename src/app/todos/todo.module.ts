@@ -7,4 +7,4 @@ import { ToDoRepository } from './todos.repository';
   controllers: [TodoController],
   providers: [TodoService, ToDoRepository],
 })
-export class TodoModules {}
+export class TodoModule {}

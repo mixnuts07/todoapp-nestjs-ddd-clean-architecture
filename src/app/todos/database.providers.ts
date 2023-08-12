@@ -4,6 +4,7 @@ import { Todo } from 'src/app/todos/entities/Todo';
 
 export const databaseProviders = [
   {
+    // provideの名前で他のDataSourceからInjectして設定を注入することができる
     provide: 'DATA_SOURCE',
     useFactory: async () => {
       const dataSource = new DataSource({
