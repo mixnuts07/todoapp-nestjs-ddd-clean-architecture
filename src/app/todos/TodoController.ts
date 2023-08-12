@@ -1,7 +1,7 @@
 import { Body, Controller, Post } from '@nestjs/common';
-import { TodoService } from 'src/app/core/services/TodoService';
-import { CreateTodoDto } from '../dto/CreateTodoDto';
-import { Todo } from 'src/app/core/entities/todo/Todo';
+import { TodoService } from 'src/app/todos/TodoService';
+import { CreateTodoDto } from './dto/create-todo.dto';
+import { Todo } from 'src/app/todos/entities/Todo';
 
 @Controller('todo')
 export class TodoController {

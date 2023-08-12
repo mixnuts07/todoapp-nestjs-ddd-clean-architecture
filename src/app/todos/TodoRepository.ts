@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
-import { Todo } from '../entities/todo/Todo';
-import { Repository, getRepository } from 'typeorm';
+import { Todo } from './entities/Todo';
+import { Repository } from 'typeorm';
+import { todoDataSource } from 'src/app/todos/todoDataSource';
 
 export interface ITodoRepository {
   save(todo: Todo): Promise<Todo>;
@@ -11,7 +12,7 @@ export class ToDoRepository implements ITodoRepository {
   private readonly repository: Repository<Todo>;
 
   constructor() {
-    this.repository = getRepository(Todo);
+    this.repository = todoDataSource.getRepository(Todo);
   }
 
   async save(todo: Todo): Promise<Todo> {

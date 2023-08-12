@@ -1,13 +1,12 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
-import { TodoController } from './app/modules/todo/controllers/TodoController';
-import { TodoService } from './app/core/services/TodoService';
-import { ToDoRepository } from './app/core/respositories/TodoRepository';
+import { TodoModules } from './app/todos/todo.module';
 
 @Module({
-  imports: [],
-  controllers: [AppController, TodoController],
-  providers: [AppService, TodoService, ToDoRepository],
+  // モジュールが依存している依存関係をインポートする
+  imports: [TodoModules],
+  // Controllerとして使用しているものを定義する
+  controllers: [],
+  // DIできるようになる
+  providers: [],
 })
 export class AppModule {}
