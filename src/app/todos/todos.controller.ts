@@ -1,5 +1,5 @@
 import { Body, Controller, Post } from '@nestjs/common';
-import { TodoService } from 'src/app/todos/TodoService';
+import { TodoService } from 'src/app/todos/todos.service';
 import { CreateTodoDto } from './dto/create-todo.dto';
 import { Todo } from 'src/app/todos/entities/Todo';
 
