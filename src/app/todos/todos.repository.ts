@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { Todo } from './entities/Todo';
 import { Repository } from 'typeorm';
-import { todoDataSource } from 'src/app/todos/todoDataSource';
+import { todoDataSource } from 'src/app/todos/database.providers';
 
 export interface ITodoRepository {
   save(todo: Todo): Promise<Todo>;
