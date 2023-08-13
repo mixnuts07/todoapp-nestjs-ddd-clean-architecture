@@ -86,13 +86,25 @@ Repository...DBとのやり取りを行う層。実装ではORマッパーの `T
 TODOを作成することができる(POST:/todo)
 TODOを1件取得することができる(GET:/todo/id)
 TODOを全件取得することができる(GET:/todo)
-TODOを更新することができる(UPDATE:/todo/id)
+TODOを更新することができる(PUT:/todo/id)
 TODOを削除することができる(DELETE:/todo/id)
 TODOの状態を見ることができる
 TODOの優先度を見ることができる
 ```
 
 ## サンプルリクエスト
+
+### TODO を全件取得する
+
+```
+curl "localhost:3000/todo"
+```
+
+### TODO を 1 件取得する
+
+```
+curl "localhost:3000/todo/1"
+```
 
 ### TODO を 1 件作成する
 
@@ -116,16 +128,10 @@ curl -X PUT "localhost:3000/todo/1" \
 }'
 ```
 
-### TODO を全件取得する
+### TODO を 1 件削除する
 
 ```
-curl "localhost:3000/todo"
-```
-
-### TODO を全件取得する
-
-```
-curl "localhost:3000/todo/1"
+curl -X DELETE "localhost:3000/todo/3"
 ```
 
 ## Installation

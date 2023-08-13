@@ -33,4 +33,8 @@ export class TodoService {
     todo.description = todoDto.description;
     return await this.todoRepository.update(id, todo);
   }
+
+  async delete(id: number) {
+    return await this.todoRepository.delete(id);
+  }
 }
