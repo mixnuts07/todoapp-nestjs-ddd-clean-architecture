@@ -2,7 +2,7 @@ import { todoDto } from 'src/app/todos/dto/todo.dto';
 import { Repository } from 'typeorm';
 import { Todo } from './entities/Todo';
 import { Inject, Injectable } from '@nestjs/common';
-import { TODO_REPOSITORY } from './const/constants';
+import { TODO_REPOSITORY } from '../database/const/constants';
 
 @Injectable()
 export class TodoService {

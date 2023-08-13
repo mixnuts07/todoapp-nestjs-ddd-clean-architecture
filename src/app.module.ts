@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { TodoModule } from './app/todos/todo.module';
-import { DatabaseModule } from './app/todos/database.module';
+import { DatabaseModule } from './app/database/database.module';
 import { ConfigModule } from '@nestjs/config';
 @Module({
   // モジュールが依存している依存関係をインポートする

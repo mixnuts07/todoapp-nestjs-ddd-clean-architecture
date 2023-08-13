@@ -1,6 +1,6 @@
 import { DataSource } from 'typeorm';
 import { Todo } from './entities/Todo';
-import { TODO_REPOSITORY } from './const/constants';
+import { TODO_REPOSITORY } from '../database/const/constants';
 
 export const todoProviders = [
   {
