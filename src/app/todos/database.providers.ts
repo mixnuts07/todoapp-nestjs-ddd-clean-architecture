@@ -11,10 +11,10 @@ export const databaseProviders = [
       const dataSource = new DataSource({
         type: 'mysql',
         host: 'localhost',
-        port: 3306,
-        username: 'admin',
-        password: 'admin',
-        database: 'todo',
+        port: Number(process.env.PORT),
+        username: process.env.MYSQL_USER,
+        password: process.env.MYSQL_PASSWORD,
+        database: process.env.MYSQL_DATABASE,
         entities: [Todo],
         // Setting synchronize: true shouldn't be used in production - otherwise you can lose production data.
         synchronize: true,
