@@ -136,3 +136,10 @@ $ pnpm run test:e2e
 # test coverage
 $ pnpm run test:cov
 ```
+
+## CHECK
+
+```bash
+$ doc exec -it todo mysql -u admin -p
+
+```
