@@ -9,11 +9,12 @@ export const databaseProviders = [
     provide: DATA_SOURCE,
     useFactory: async () => {
       const dataSource = new DataSource({
-        type: 'postgres',
+        type: 'mysql',
         host: 'localhost',
-        username: process.env.POSTGRES_USER,
-        password: process.env.POSTGRES_PASSWORD,
-        database: process.env.POSTGRES_DB,
+        port: 3306,
+        username: 'admin',
+        password: 'admin',
+        database: 'todo',
         entities: [Todo],
         // Setting synchronize: true shouldn't be used in production - otherwise you can lose production data.
         synchronize: true,

@@ -1,19 +1,23 @@
-version: '3.8'
+version: '3'
 
 services:
   todo:
-    image: postgres:13
-    container_name: todo_table
+    image: mysql:8.0
+    container_name: todo_container
+    # コンテナ内のプロセスが異常終了（例: エラーによる終了）
+    # コンテナが正常に終了した場合
+    # Docker サービス/デーモンが再起動された場合（例: ホストマシンの再起動後）
+    # restart: always
     environment:
-      POSTGRES_USER: $(POSTGRES_USER)
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
-      POSTGRES_DB: ${POSTGRES_DB}
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: todo
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin
     ports:
-      - '5432:5432'
+      - '3306:3306'
     volumes:
-      - todo_data:/var/lib/postgresql/data # データの永続化(Postgresqlが保持するデータをtodo_dataという名前付きVolumeで永続的に保存している)
-      - ./src/app/infrastructure/database/createtable.sql:/docker-entrypoint-initdb.d/createtable.sql # SQLファイルのマウント
+      - todo_data:/var/lib/mysql
+      - ./mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
 
-# 名前付きボリューム
 volumes:
   todo_data:
