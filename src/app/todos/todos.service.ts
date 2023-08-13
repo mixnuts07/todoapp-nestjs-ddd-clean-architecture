@@ -1,4 +1,4 @@
-import { CreateTodoDto } from 'src/app/todos/dto/create-todo.dto';
+import { todoDto } from 'src/app/todos/dto/todo.dto';
 import { Repository } from 'typeorm';
 import { Todo } from './entities/Todo';
 import { Inject, Injectable } from '@nestjs/common';
@@ -11,10 +11,10 @@ export class TodoService {
     private readonly todoRepository: Repository<Todo>,
   ) {}
 
-  async save(createTodoDto: CreateTodoDto): Promise<Todo> {
+  async save(todoDto: todoDto): Promise<Todo> {
     const todo = new Todo();
-    todo.title = createTodoDto.title;
-    todo.description = createTodoDto.description;
+    todo.title = todoDto.title;
+    todo.description = todoDto.description;
 
     return await this.todoRepository.save(todo);
   }
@@ -25,5 +25,12 @@ export class TodoService {
 
   async findAll(): Promise<Todo[]> {
     return await this.todoRepository.find();
+  }
+
+  async update(id: number, todoDto: todoDto) {
+    const todo = new Todo();
+    todo.title = todoDto.title;
+    todo.description = todoDto.description;
+    return await this.todoRepository.update(id, todo);
   }
 }

@@ -1,5 +1,5 @@
 // クライアントからサーバーへのデータの形式を定義
-export class CreateTodoDto {
+export class todoDto {
   title: string;
   description: string;
 }

@@ -105,6 +105,17 @@ curl -X POST 'http://localhost:3000/todo' \
 }'
 ```
 
+### TODO を 1 件更新する
+
+```
+curl -X PUT "localhost:3000/todo/1" \
+-H "Content-Type: application/json" \
+ -d '{
+    "title": "update title",
+    "description": "this is upated data"
+}'
+```
+
 ## Installation
 
 ```bash
