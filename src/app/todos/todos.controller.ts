@@ -12,6 +12,11 @@ export class TodoController {
     return this.todoService.findOneBy(id);
   }
 
+  @Get()
+  async findAll(): Promise<Todo[]> {
+    return this.todoService.findAll();
+  }
+
   @Post()
   async create(@Body() createTodoDto: CreateTodoDto): Promise<Todo | void> {
     return this.todoService.save(createTodoDto);

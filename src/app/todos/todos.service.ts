@@ -22,4 +22,8 @@ export class TodoService {
   async findOneBy(id: number): Promise<Todo> {
     return await this.todoRepository.findOneBy({ id: id });
   }
+
+  async findAll(): Promise<Todo[]> {
+    return await this.todoRepository.find();
+  }
 }
