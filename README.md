@@ -4,6 +4,16 @@ Nest.js と TypeScript で作る簡易的な TODO アプリケーションです
 
 DDD とクリーンアーキテクチャの練習で作りました。
 
+## 残りやること
+
+- エラーハンドリング
+
+- テストを書く
+
+- クリーンアーキテクチャっぽくないから設計を再考する
+
+- app 配下のディレクトリの切り方を再考したい。現状 database がドメインっぽくなっている。また、service や repository はディレクトリを切っていないので良いやり方を Nest.js の Docs を見てみる。
+
 ## 技術スタック
 
 TypeScript
@@ -12,7 +22,7 @@ Nest.js
 
 TypeORM
 
-PostgreSQL
+MySQL
 
 docker-compose
 
@@ -23,20 +33,12 @@ Jest
 ```
 src/
 ├── app/
-│ ├── core/
-│ │ ├── shared/ // ドメインの共通モジュール
+│ ├── todos/
+│ │ └── dto/ // データ転送オブジェクト
 │ │ ├── entities/ // エンティティ（ドメインモデル）
-│ │ ├── repositories/ // ドメインリポジトリ
-│ │ └── services/ // ドメインサービス
-│ ├── modules/
-│ │ ├── todo/
-│ │ │ ├── dto/ // データ転送オブジェクト
-│ │ │ ├── usecases/ // ユースケース（アプリケーション層）(deleted)
-│ │ │ └── controllers/ // API コントローラー（プレゼンテーション層）
-│ ├── infrastructure/ // インフラストラクチャ層
-│ │ ├── database/ // データベース関連
-│ │ ├── external/ // 外部 API クライアントや AWS サービスなど
-│ │ └── config/ // 設定ファイルや DI コンテナの設定
+│ │ ├── gateway/ // ユースケース、DBとの中間層(未実装)
+│ ├── database/
+│ │ ├── const/ // 定数
 ├── main.ts // アプリケーションのエントリーポイント
 └── app.module.ts // アプリケーションのルートモジュール
 ```
