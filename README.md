@@ -14,6 +14,8 @@ DDD とクリーンアーキテクチャの練習で作りました。
 
 - Nest.js でまだ使っていない機能で使えそうなものを実装してみる
 
+- [認証の実装](https://docs.nestjs.com/security/authentication)
+
 - クリーンアーキテクチャっぽくないから設計を再考する
 
 - app 配下のディレクトリの切り方を再考したい。現状 database がドメインっぽくなっている。また、service や repository はディレクトリを切っていないので良いやり方を Nest.js の Docs を見てみる。
