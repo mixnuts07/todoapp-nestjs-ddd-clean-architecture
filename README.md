@@ -116,6 +116,18 @@ curl -X PUT "localhost:3000/todo/1" \
 }'
 ```
 
+### TODO を全件取得する
+
+```
+curl "localhost:3000/todo"
+```
+
+### TODO を全件取得する
+
+```
+curl "localhost:3000/todo/1"
+```
+
 ## Installation
 
 ```bash
