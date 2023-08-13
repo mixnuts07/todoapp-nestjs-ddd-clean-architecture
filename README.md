@@ -92,6 +92,19 @@ TODOの状態を見ることができる
 TODOの優先度を見ることができる
 ```
 
+## サンプルリクエスト
+
+### TODO を 1 件作成する
+
+```
+curl -X POST 'http://localhost:3000/todo' \
+-H 'Content-Type: application/json' \
+-d '{
+  "title": "Your First Todo Title",
+  "description": "Your First Todo Description"
+}'
+```
+
 ## Installation
 
 ```bash
