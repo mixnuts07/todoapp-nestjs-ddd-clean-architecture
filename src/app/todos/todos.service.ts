@@ -18,4 +18,8 @@ export class TodoService {
 
     return await this.todoRepository.save(todo);
   }
+
+  async findOneBy(id: number): Promise<Todo> {
+    return await this.todoRepository.findOneBy({ id: id });
+  }
 }
